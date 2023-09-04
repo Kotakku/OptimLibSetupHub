@@ -1,7 +1,8 @@
 #!/bin/sh
 sudo apt install -y git cmake gcc g++ gfortran pkg-config liblapack-dev pkg-config coinor-libipopt-dev --install-recommends
 git clone https://github.com/casadi/casadi.git casadi
-echo "export CMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH:$HOME/local/:/opt/hpipm/cmake"" >> ~/.bashrc
+# echo "export CMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH:$HOME/local/:/opt/hpipm/cmake"" >> ~/.bashrc
+echo "export CMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH:$HOME/local/"" >> ~/.bashrc
 source ~/.bashrc
 cd casadi
 mkdir build
