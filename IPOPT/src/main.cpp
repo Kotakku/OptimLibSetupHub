@@ -25,6 +25,7 @@ int main(
    // We are using the factory, since this allows us to compile this
    // example with an Ipopt Windows DLL
    SmartPtr<IpoptApplication> app = IpoptApplicationFactory();
+   app->Options()->SetStringValue("linear_solver", "mumps");
 
    // Initialize the IpoptApplication and process the options
    ApplicationReturnStatus status;
